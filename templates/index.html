@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lip Reading TCN & LipNet</title>
+  
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1>Lip Reading</h1>
+    <video id="video" width="600" height="400" playsinline autoplay style="display: none;"></video>
+    <canvas id="canvas" width="600" height="400"></canvas>
+    <canvas id="frame"></canvas>
+    <canvas id="mouth"></canvas>
+    <video id="recorded" playsinline loop></video>
+    <button id="record">Grabar</button>
+    <button id="play">Reproducir</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
+    <!--<script src="app.js"></script>-->
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
