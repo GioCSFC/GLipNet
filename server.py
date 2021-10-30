@@ -5,12 +5,15 @@ import re
 import io
 import binascii
 import time
+from flask_cors import CORS
 
 
 #template_dir = os.path.abspath('./frontend/')
 
 #app = Flask(__name__, template_folder=template_dir)
 app = Flask(__name__)
+
+CORS(app, resources={r'/*': {'origins': '*'}})
 
 IMG_PATH = "img/"
 
@@ -30,4 +33,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(debug = True, port = 8000, host="0.0.0.0")
+    app.run(debug = True, port = 8080, host="0.0.0.0")

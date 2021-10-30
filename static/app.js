@@ -127,7 +127,7 @@ async function sendPictures(){
     //console.log(fd2)
     fd2.append("text", ind-1);
     
-    var url='http://127.0.0.1:8000/predict';
+    var url='http://127.0.0.1:8080/predict';
             await axios.post(url, fd2)
             .then(function(res){
                 console.log(res.data)
